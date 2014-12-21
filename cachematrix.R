@@ -1,9 +1,10 @@
 ## This script will provide you with the inverse of a square matrix
 ## which is stored in the cache of system to avoid using up memory
 
-## This function will take in your square matrix x, set the inverse to null,
-## write over an existing inverse with null if passing in a new matrix,
-## then returns the value of matrix that was passed in, 
+## This function will take in your square matrix x; set the inverse to null;
+## write over an existing inverse with null if passing in a new matrix;
+## then returns the value of matrix that was passed in; stores the super assignment
+## of solve in inverse in the function setinv; gets the inverse matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
     inv<- NULL    
@@ -18,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function takes the matrix "inv" created by makeCacheMatrix; if there is
+## an exixting copy of that particular matrix in the cache, it will flash the message
+## getting cached data on the screen. 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
